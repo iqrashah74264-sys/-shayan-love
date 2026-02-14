@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For My Shayan ❤️</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  text-align:center;
+  background: linear-gradient(to right,#ff9a9e,#fad0c4);
+  color:white;
+}
+
+.page{
+  display:none;
+  padding-top:100px;
+}
+
+button{
+  padding:12px 25px;
+  margin:15px;
+  font-size:18px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.yes{background:#ff4d6d;color:white;}
+.next{background:white;color:#ff4d6d;}
+
+h1{font-size:40px;}
+p{font-size:20px;}
+</style>
+</head>
+
+<body>
+
+<!-- Romantic Background Music -->
+<audio autoplay loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Page 1 -->
+<div class="page" id="page1" style="display:block;">
+  <h1>My Shayan ❤️</h1>
+  <p>You are the best thing that ever happened to me 💕</p>
+  <p>Will You Be My Valentine? 💌</p>
+  <button class="yes" onclick="showPage(2)">Yes 💖</button>
+</div>
+
+<!-- Page 2 -->
+<div class="page" id="page2">
+  <h1>Yayyy 🥹❤️</h1>
+  <p>From the moment you came into my life,</p>
+  <p>everything became brighter ✨</p>
+  <p>You are my happiness, my peace, my forever 💞</p>
+  <button class="next" onclick="showLove()">Next ➡</button>
+</div>
+
+<!-- Page 3 -->
+<div class="page" id="page3">
+  <h1>I Love You Shayan ❤️</h1>
+  <div id="loveText"></div>
+  <button class="next" onclick="showMiss()">Next ➡</button>
+</div>
+
+<!-- Page 4 -->
+<div class="page" id="page4">
+  <h1>I Miss You Shayan 💓</h1>
+  <div id="missText"></div>
+  <button class="next" onclick="showPage(5)">Next ➡</button>
+</div>
+
+<!-- Page 5 -->
+<div class="page" id="page5">
+  <h1>Forever Yours ❤️</h1>
+  <p>No matter where life takes us,</p>
+  <p>I will always choose you 💍</p>
+  <p>Happy Valentine's Day My Love 💌💖</p>
+</div>
+
+<script>
+function showPage(num){
+  let pages=document.getElementsByClassName("page");
+  for(let i=0;i<pages.length;i++){
+    pages[i].style.display="none";
+  }
+  document.getElementById("page"+num).style.display="block";
+}
+
+function showLove(){
+  showPage(3);
+  let text="";
+  for(let i=1;i<=100;i++){
+    text+= i + ". I Love You Shayan ❤️<br>";
+  }
+  document.getElementById("loveText").innerHTML=text;
+}
+
+function showMiss(){
+  showPage(4);
+  let text="";
+  for(let i=1;i<=100;i++){
+    text+= i + ". I Miss You Shayan 💓<br>";
+  }
+  document.getElementById("missText").innerHTML=text;
+}
+</script>
+
+</body>
+</html>
